@@ -247,3 +247,12 @@ func IpV4Address() string {
 
 	return strings.Join(blocks, ".")
 }
+
+func StringsIn(n int, in ...string) []string {
+	result := make([]string, n)
+	for i := 0; i < n; i++ {
+		result[i] = randomFrom(in)
+	}
+
+	return result
+}
